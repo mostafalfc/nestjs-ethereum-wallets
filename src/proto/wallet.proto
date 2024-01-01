@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wallet;
+
+message create_wallet_response { string address = 1; }
+message create_wallet_request {}
+
+service WalletService {
+  rpc createWallet(create_wallet_request) returns (create_wallet_response);
+}
